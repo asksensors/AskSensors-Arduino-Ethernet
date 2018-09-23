@@ -1,7 +1,7 @@
 /*
   Web client
 
- * Description:  This sketch sends data to AskSensors (https://asksensors.com) using the Arduino Ethernet shield.
+ * Description:  This sketch connects to a website (https://asksensors.com) using an Arduino Wiznet Ethernet shield.
  *  Author: https://asksensors.com, 2018
  *  github: https://github.com/asksensors
  */
@@ -46,7 +46,7 @@ void setup() {
   delay(1000);
   Serial.println("connecting...");
     // if you get a connection, report back via serial:
-  if (client.connect(server, port)) { //35.229.58.223, 8585
+  if (client.connect(server, port)) { 
     Serial.print("connected asksensors.com");
       //Create a URL for the request
       String url = "http://asksensors.com/api.asksensors/write/";
@@ -56,8 +56,8 @@ void setup() {
       Serial.print("********** requesting URL: ");
       Serial.println(url);
      //Make a HTTP request:
-      client.print(String("GET ") + "/api.asksensors/write/MTWN7AQOLWJNEIF8RGMAW5EGKQFAHN2K?module1=20" + " HTTP/1.1\r\n" +
-               "Host: " + "asksensors.com" + "\r\n" +
+      client.print(String("GET ") + url + " HTTP/1.1\r\n" +
+               "Host: " + server + "\r\n" +
                "Connection: close\r\n\r\n");
     client.println();
     
