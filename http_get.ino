@@ -22,7 +22,8 @@ IPAddress ip(192, 168, 1, 177);
 char server[] = "asksensors.com";                               // ASKSENSORS host name
 const int port = 80;                                      // Port: HTTP=80
 const char* apiKeyIn = "MTWN7AQOLWJNEIF8RGMAW5EGKQFAHN2K";      // API KEY IN (change it with your API KEY IN)
-
+// dummy data
+int dumData = 100;    // set your data
 
 // Initialize the Ethernet client library
 // with the IP address and port of the server
@@ -52,7 +53,7 @@ void setup() {
       String url = "http://asksensors.com/api.asksensors/write/";
       url += apiKeyIn;
       url += "?module1=";
-      url += 100;
+      url += dumData;
       Serial.print("********** requesting URL: ");
       Serial.println(url);
      //Make a HTTP request:
