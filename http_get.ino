@@ -1,5 +1,5 @@
 /*
-  Web client
+  Connect Arduino Ethernet to AskSensors
 
  * Description:  This sketch connects to a website (https://asksensors.com) using an Arduino Wiznet Ethernet shield.
  *  Author: https://asksensors.com, 2018
@@ -21,7 +21,7 @@ IPAddress ip(192, 168, 1, 177);
 // ASKSENSORS config.     
 char server[] = "asksensors.com";                               // ASKSENSORS host name
 const int port = 80;                                      // Port: HTTP=80
-const char* apiKeyIn = "MTWN7AQOLWJNEIF8RGMAW5EGKQFAHN2K";      // API KEY IN (change it with your API KEY IN)
+const char* apiKeyIn = "5V8APAV9Q0OWEBDOSCYRSKGGEIWC3M8Q";      // API KEY IN (change it with your API KEY IN)
 // dummy data
 int dumData = 100;    // set your data
 
