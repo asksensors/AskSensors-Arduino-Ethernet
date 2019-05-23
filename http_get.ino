@@ -16,12 +16,12 @@
 // Newer Ethernet shields have a MAC address printed on a sticker on the shield
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 // Set the static IP address to use if the DHCP fails to assign
-IPAddress ip(192, 168, 1, 177);
+IPAddress ip(....., ....., ....., .....); // example IPAddress ip(192, 168, 1, 100);
 
 // ASKSENSORS config.     
 char server[] = "asksensors.com";                               // ASKSENSORS host name
 const int port = 80;                                      // Port: HTTP=80
-const char* apiKeyIn = "5V8APAV9Q0OWEBDOSCYRSKGGEIWC3M8Q";      // API KEY IN (change it with your API KEY IN)
+const char* apiKeyIn = "........................";      // API KEY IN (change it with your API KEY IN)
 // dummy data
 int dumData = 100;    // set your data
 
